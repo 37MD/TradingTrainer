@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/nse-proxy.js": {
+      "maxDuration": 20
+    }
+  }
+}
