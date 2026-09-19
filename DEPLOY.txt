@@ -1,0 +1,23 @@
+TRADING PSYCHOLOGY TRAINER - PWA DEPLOY NOTES
+=============================================
+Upload this WHOLE folder (keep the structure) to any HTTPS host, e.g. GitHub Pages / Netlify:
+
+    index.html
+    sw.js
+    manifest.webmanifest
+    icons/  (6 PNG files)
+
+Then open the https:// address on your phone:
+  Android / Chrome : an "Install app" button appears at the top -> tap it.
+  iPhone / Safari  : tap Share -> "Add to Home Screen" (a hint appears in the app).
+
+WHEN YOU CHANGE index.html LATER
+  1. Open sw.js and change   const VERSION = "tpt-v1";   to   "tpt-v2"  (then v3 ...).
+  2. Upload index.html and sw.js.
+  Users see "A new version is ready - Update"; their saved career resumes automatically.
+
+NOTES
+  - Works offline after the first visit.
+  - Opening index.html by double-click (file://) still works as a normal web page; install/offline need https.
+  - Saved careers live in the browser's localStorage, not in the app cache, so updates never delete them.
+  - After deploying, run Lighthouse (Chrome DevTools > Lighthouse > PWA) once to confirm.
